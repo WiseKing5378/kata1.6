@@ -107,7 +107,7 @@ body {
       color: $white;
 
       &::after {
-         content: url('/src/assets/img/modal-arrow.svg');
+         content: url('../assets/img/modal-arrow.svg');
          display: flex;
          align-items: center;
       }
