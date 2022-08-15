@@ -85,7 +85,6 @@ body {
   align-items: center;
   gap: 16px;
   border: none;
-  background-color: none;
   background-color: #f8f8f8; }
   .expand-btn::before {
     content: url(./static/expand.svg);
@@ -97,7 +96,7 @@ body {
     font-size: 16px;
     color: #1b1c21; }
 
-.expand-btnR::before {
+.expand-btn--rotate::before {
   transform: rotate(-180deg);
   transition: all linear 0.25s; }
 
