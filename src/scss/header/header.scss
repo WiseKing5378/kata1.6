@@ -1,3 +1,14 @@
+.header-container {
+   display: flex;
+   flex-direction: column;
+   @media (min-width: $desktop-max) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding: 34px 34px 34px 0;
+      align-items: center;
+   }
+}
+
 .header {
    padding: 18px 16px;
    margin-bottom: 24px;
@@ -6,12 +17,20 @@
    background: $white;
    justify-content: space-between;
    @media (min-width: $desktop-max) {
-      display: none;
+      background-color: $light-grey;
+      padding: 0;
+      margin: 0;
    }
 
    &__list {
       display: flex;
       gap: 16px;
+
+      &:nth-child(1) {
+         @media (min-width: $desktop-max) {
+            display: none;
+         }
+      }
 
       &:nth-child(2) .header__list-item:nth-child(2)::before {
          content: '';
@@ -20,6 +39,10 @@
          border: 1px solid $light-grey-bprder;
          margin-right: 16px;
          border-radius: 1px;
+
+         @media (min-width: $desktop-max) {
+            display: none;
+         }
       }
       @media (max-width: $phone) {
          &:nth-child(1) .header__list-item:nth-child(2)::before {
@@ -31,6 +54,8 @@
    &__list-item {
       display: flex;
       align-items: center;
+      gap: 8px;
+
       &:nth-child(2)::before {
          content: '';
          margin-top: 3px;
@@ -49,6 +74,10 @@
       @media (max-width: $phone) {
          display: none;
       }
+
+      @media (min-width: $desktop-max) {
+         display: none;
+      }
    }
 
    &__list-item-tablet {
@@ -61,5 +90,36 @@
       align-items: center;
       justify-content: center;
       height: 50.81px;
+   }
+
+   &__main-title {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 40px;
+
+      &::before {
+         content: '';
+         border: 2px solid $light-sky;
+         border-radius: 0 5px 5px 0;
+         margin-right: 12px;
+
+         @media (min-width: $tablet) {
+            margin-right: 20px;
+         }
+         @media (min-width: $desktop) {
+            margin-right: 30px;
+         }
+      }
+   }
+
+   &__button-text {
+      display: none;
+      font-weight: 500;
+      color: $black;
+      font-size: 16px;
+
+      @media (min-width: $desktop-max) {
+         display: block;
+      }
    }
 }
