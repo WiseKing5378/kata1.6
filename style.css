@@ -123,7 +123,7 @@ body {
     gap: 12px;
     color: #ffffff; }
     .submit-btn span::after {
-      content: url("/src/assets/img/modal-arrow.svg");
+      content: url(./static/modal-arrow.svg);
       display: flex;
       align-items: center; }
 
