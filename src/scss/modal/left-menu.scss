@@ -1,0 +1,175 @@
+.left-menu {
+   transition: all linear 0.25s;
+   opacity: 1;
+   font-family: 'TT Lakes', sans-serif;
+   font-weight: 500;
+   color: $black;
+   font-size: 16px;
+   line-height: 24px;
+   z-index: 50;
+
+   box-sizing: border-box;
+   width: 320px;
+   min-height: 670px;
+   height: 100vh;
+   background: $white;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   gap: 32px;
+   padding: 18px 16px 32px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   box-shadow: 16px 0 52px 0 #0e185033, -2px 0 4px 0 #454f7e05;
+
+   @media (min-height: 900px) {
+      padding: 18px 24px 32px;
+   }
+   @media (min-width: $desktop-max) {
+      z-index: 9;
+      left: calc((100% - 1366px) / 2);
+      box-shadow: none;
+   }
+
+   &__top {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      @media (min-height: 900px) {
+         gap: 50px;
+      }
+   }
+
+   /* Верхние кнопки*/
+   &__header {
+      display: flex;
+      align-items: center;
+      @media (min-height: 900px) {
+         margin-right: 78px;
+      }
+   }
+
+   &__header-el {
+      display: flex;
+      align-items: center;
+
+      /*Отступы лого*/
+      &:nth-child(2) {
+         margin-left: 17px;
+         margin-right: 93px;
+         @media (min-height: 900px) {
+            margin-left: 17px;
+            margin-right: 78px;
+         }
+      }
+
+      &:nth-child(1) {
+         @media (min-width: $desktop-max) {
+            display: none;
+         }
+      }
+   }
+
+   &__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &__logo {
+      height: 52px;
+   }
+
+   &__bottom ul:nth-child(2) {
+      margin-top: 16px;
+      margin-bottom: 8px;
+      @media (min-height: 900px) {
+         margin-bottom: 40px;
+      }
+   }
+
+   &__button {
+      display: flex;
+      gap: 16px;
+   }
+
+   /*Контакты*/
+   &__contact {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+   }
+
+   &__contact-item:last-child {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+   }
+
+   &__contact-link {
+      color: $black;
+   }
+
+   /*Языки*/
+   &__lang {
+      display: flex;
+      gap: 7px;
+   }
+
+   &__lang-link {
+      color: $black;
+      &:active,
+      :hover {
+         color: $muted;
+      }
+   }
+
+   &__hidden {
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(-500px, 0);
+      @media (min-width: $desktop-max) {
+         opacity: 1;
+         visibility: visible;
+         transform: translate(0);
+      }
+   }
+}
+
+/*Навигация*/
+.menu-nav {
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      @media (min-height: 900px) {
+         gap: 32px;
+      }
+   }
+
+   &__link {
+      display: inline-block;
+      color: $black;
+      transition: all linear.5s;
+      &:active::before,
+      &:hover::before {
+         content: '';
+         position: relative;
+         left: -16px;
+         height: 32px;
+         border: 2px solid $light-sky;
+         border-radius: 0 10px 10px 0;
+         margin-right: -4px;
+         @media (min-height: 900px) {
+            content: '';
+            position: relative;
+            left: -24px;
+         }
+      }
+      &:active,
+      &:hover {
+         color: $muted;
+      }
+   }
+}

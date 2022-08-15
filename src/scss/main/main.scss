@@ -1,0 +1,58 @@
+.main {
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
+   @media (min-width: $tablet) and (max-width: $tablet-max) {
+      gap: 32px;
+   }
+   @media (min-width: $desktop) {
+      gap: 50px;
+   }
+
+   &__heading {
+      padding: 16px 16px;
+      border-top: 1px solid $sky-border;
+      background: linear-gradient(90deg, $light-grey, $white);
+      @media (min-width: $tablet) and (max-width: $tablet-max) {
+         padding: 16px 24px;
+      }
+      @media (min-width: $desktop) {
+         padding: 16px 32px;
+      }
+   }
+
+   &__title {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      color: $muted;
+      text-transform: uppercase;
+   }
+
+   &__slider-wrapper {
+      @media (min-width: $tablet) and (max-width: $tablet-max) {
+         height: auto;
+         max-height: 200px;
+         transition: max-height 0.5s cubic-bezier(0, 0.31, 0, 1);
+         overflow: hidden;
+      }
+      @media (min-width: $desktop) {
+         height: auto;
+         max-height: 200px;
+         transition: max-height 0.5s cubic-bezier(0, 0.31, 0, 1);
+         overflow: hidden;
+      }
+   }
+
+   &__expand-btn {
+      @media (max-width: $phone) {
+         display: none;
+      }
+      @media (min-width: $tablet) and (max-width: $tablet-max) {
+         margin-left: 24px;
+      }
+      @media (min-width: $desktop) {
+         margin-left: 32px;
+      }
+   }
+}

@@ -1,0 +1,26 @@
+.device-link {
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+   align-items: flex-end;
+   padding: 16px;
+   height: 160px;
+   box-sizing: border-box;
+   width: 240px;
+
+   border: 1px solid $light-grey-bprder;
+   border-radius: 6px;
+   background: $white;
+
+   @media (min-width: $tablet) {
+      width: 221px;
+   }
+}
+
+.device-title {
+   align-self: start;
+
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 24px;
+}

@@ -1,0 +1,115 @@
+body {
+   font-family: 'TT Lakes', sans-serif;
+   background-color: $light-grey;
+   margin: 0;
+   padding: 0;
+}
+::-webkit-scrollbar {
+   width: 0;
+}
+
+.main-container {
+   max-width: $desktop;
+   margin-left: auto;
+   margin-right: auto;
+   @media (min-width: $desktop-max) {
+      max-width: $desktop-max;
+   }
+}
+.container {
+   max-width: $desktop;
+   display: flex;
+   flex-direction: column;
+   @media (min-width: $desktop-max) {
+      margin: 0;
+      margin-left: auto;
+   }
+}
+
+.circle-icon {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   background: $pink;
+   border-radius: 50%;
+   width: 40px;
+   height: 40px;
+   border: none;
+   transition: all linear.25s;
+
+   &:hover {
+      opacity: 0.75;
+   }
+}
+
+.circle__link {
+   height: 40px;
+   width: 40px;
+   border: $pink solid 2px;
+   border-radius: 50%;
+   background: url('../assets/img/dropdown.svg') no-repeat center center;
+   transition: all linear.25s;
+}
+
+.expand-btn {
+   display: flex;
+   align-items: center;
+   gap: 16px;
+   border: none;
+   background-color: none;
+   background-color: $light-grey;
+
+   &::before {
+      content: url('../assets/img/expand.svg');
+      height: 24px;
+      transition: all linear.25s;
+   }
+
+   &__text {
+      font-family: 'TT Lakes', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: $black;
+   }
+}
+
+.expand-btnR::before {
+   transform: rotate(-180deg);
+   transition: all linear.25s;
+}
+
+.expand-area.expand-btn-active {
+   overflow: visible;
+   height: auto;
+   max-height: 600px;
+   transition: max-height 0.5s cubic-bezier(1, 0.15, 0, 1.22);
+}
+
+.submit-btn {
+   height: 32px;
+   padding: 4px 12px;
+
+   background: $pink;
+   border: 0;
+   border-radius: 16px;
+   transition: all linear.25s;
+
+   &:hover {
+      opacity: 0.75;
+   }
+
+   span {
+      font-size: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      color: $white;
+
+      &::after {
+         content: url('/src/assets/img/modal-arrow.svg');
+         display: flex;
+         align-items: center;
+      }
+   }
+}

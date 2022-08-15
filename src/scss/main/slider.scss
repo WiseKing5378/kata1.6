@@ -1,0 +1,67 @@
+.slider {
+   width: 100%;
+   overflow: hidden;
+
+   &__wrapper {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      padding-top: 16px;
+
+      @media (min-width: $tablet) and (max-width: $tablet-max) {
+         flex-wrap: wrap;
+         gap: 16px 24px;
+         padding: 24px;
+         box-sizing: border-box;
+      }
+      @media (min-width: $desktop) {
+         flex-wrap: wrap;
+         gap: 16px 32px;
+         padding: 32px;
+         box-sizing: border-box;
+      }
+   }
+
+   &__card {
+      width: auto;
+      transition: all linear.25s;
+      margin-left: 16px;
+      border-radius: 6px;
+      @media (min-width: $tablet) {
+         margin: 0;
+      }
+
+      &:hover {
+         box-shadow: 0 0 5px 0 gray;
+         & .circle__link {
+            transform: scale(0.95) translate(1px, 0);
+         }
+      }
+
+      &:last-child {
+         margin-right: 16px;
+         @media (min-width: $tablet) {
+            margin: 0;
+         }
+      }
+   }
+}
+
+.swiper-pagination {
+   position: relative;
+   margin-top: 20px;
+
+   @media (min-width: $tablet) {
+      display: none;
+   }
+}
+
+.swiper-pagination-bullet {
+   background: #dddddd;
+   height: 12px;
+   width: 12px;
+}
+
+.swiper-pagination-bullet-active {
+   background: #b5b6bc;
+}

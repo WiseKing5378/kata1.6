@@ -1,0 +1,112 @@
+.menu {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+
+   @media (min-width: $desktop-max) {
+      margin-top: 42px;
+   }
+
+   &__title-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-right: 32px;
+   }
+
+   &__main-title {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 40px;
+
+      &::before {
+         content: '';
+         border: 2px solid $light-sky;
+         border-radius: 0 5px 5px 0;
+         margin-right: 12px;
+
+         @media (min-width: $tablet) {
+            margin-right: 20px;
+         }
+         @media (min-width: $desktop) {
+            margin-right: 30px;
+         }
+      }
+   }
+
+   &__button-block {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      @media (max-width: $phone) {
+         display: none;
+      }
+      @media (max-width: $desktop-max) {
+         display: none;
+      }
+   }
+
+   &__button-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      &:hover .circle-icon {
+         opacity: 0.75;
+      }
+   }
+
+   &__button-text {
+      font-weight: 500;
+      color: $black;
+      font-size: 16px;
+   }
+
+   /*Навигация*/
+
+   &__list {
+      margin: 0;
+      padding-left: 40px;
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      overflow-x: auto;
+      gap: 7px;
+      -ms-overflow-style: none;
+      scrollbar-color: transparent transparent;
+
+      @media (min-width: $desktop) {
+         justify-content: start;
+         flex-wrap: wrap;
+         overflow-x: visible;
+         margin-bottom: -10px;
+      }
+
+      &::-webkit-scrollbar {
+         display: none;
+      }
+   }
+
+   &__list-item {
+      display: flex;
+      white-space: nowrap;
+   }
+
+   &__link {
+      transition: all linear.25s;
+      color: $muted;
+      padding: 7px;
+      padding-left: 16px;
+      padding-right: 16px;
+      border: 2px solid transparent;
+      border-radius: 7px;
+
+      &:active,
+      &:hover {
+         border-color: #b8ffec;
+         background-color: $white;
+         transform: scale(1.05);
+      }
+   }
+}

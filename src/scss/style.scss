@@ -1,0 +1,21 @@
+@import 'variables';
+
+@import 'nonstyle';
+@import 'fonts';
+@import 'common';
+
+@import 'header/header';
+
+@import 'nav/menu';
+
+@import 'main/main';
+@import 'main/aboutUs';
+@import 'main/slider';
+@import 'main/brand';
+@import 'main/device';
+@import 'main/price';
+
+@import 'footer/footer';
+
+@import 'modal/left-menu';
+@import 'modal/modal';
