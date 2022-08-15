@@ -557,7 +557,7 @@ body {
     font-size: 16px;
     line-height: 24px; }
     .price-footer__link:after {
-      content: url("/assets/img/link-arrow.svg"); }
+      content: url(./static/link-arrow.svg); }
     .price-footer__link:hover {
       opacity: 0.75; }
 
