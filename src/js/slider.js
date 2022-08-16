@@ -27,6 +27,7 @@ function mobileSlider() {
       }
    }
 }
+mobileSlider()
 
 window.addEventListener('resize', function () {
    mobileSlider()
