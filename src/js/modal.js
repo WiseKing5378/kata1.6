@@ -4,8 +4,6 @@ const modalFeedback = document.querySelector('.modal-feedback')
 const modalMenu = document.querySelector('.left-menu')
 const overlay = document.querySelector('.overlay')
 
-console.log(overlay)
-
 /*Кнопки */
 const callBtn = document.querySelectorAll('.call-btn')
 const feedbackBtn = document.querySelectorAll('.feedback-btn')
