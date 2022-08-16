@@ -621,7 +621,7 @@ body {
       left: calc((100% - 1366px) / 2);
       box-shadow: none; } }
   .left-menu__wrapper {
-    height: 100vh;
+    height: calc(100vh - 40px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
